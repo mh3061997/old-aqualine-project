@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B18DCEA7-B6F0-430C-B451-94B58E9EEF7A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AquaLine</RootNamespace>
+    <AssemblyName>AquaLine</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AquaLineDataSet.cs">
+      <DependentUpon>AquaLineDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AquaLineDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AquaLineDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AquaLineDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AquaLineDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AquaLineDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AquaLineDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AquaLineDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AquaLineDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AquaLineDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AquaLineDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AquaLineDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AquaLineDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assignments.Designer.cs">
+      <DependentUpon>Assignments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branches.Designer.cs">
+      <DependentUpon>Branches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clientorders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clientorders.Designer.cs">
+      <DependentUpon>clientorders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clients.Designer.cs">
+      <DependentUpon>clients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller.cs" />
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBManager.cs" />
+    <Compile Include="employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employees.Designer.cs">
+      <DependentUpon>employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="legalinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="legalinfo.Designer.cs">
+      <DependentUpon>legalinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock.Designer.cs">
+      <DependentUpon>stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoredProcedures.cs" />
+    <Compile Include="supplierorders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="supplierorders.Designer.cs">
+      <DependentUpon>supplierorders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="suppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="suppliers.Designer.cs">
+      <DependentUpon>suppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="warehouse.Designer.cs">
+      <DependentUpon>warehouse.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Assignments.resx">
+      <DependentUpon>Assignments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branches.resx">
+      <DependentUpon>Branches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clientorders.resx">
+      <DependentUpon>clientorders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clients.resx">
+      <DependentUpon>clients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employees.resx">
+      <DependentUpon>employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="legalinfo.resx">
+      <DependentUpon>legalinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Report5.rdlc" />
+    <EmbeddedResource Include="Report6.rdlc" />
+    <EmbeddedResource Include="Report7.rdlc" />
+    <EmbeddedResource Include="Report8.rdlc" />
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock.resx">
+      <DependentUpon>stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supplierorders.resx">
+      <DependentUpon>supplierorders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="suppliers.resx">
+      <DependentUpon>suppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="warehouse.resx">
+      <DependentUpon>warehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AquaLineDataSet.xsc">
+      <DependentUpon>AquaLineDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AquaLineDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AquaLineDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AquaLineDataSet.xss">
+      <DependentUpon>AquaLineDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AquaLineDataSet1.xsc">
+      <DependentUpon>AquaLineDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AquaLineDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AquaLineDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AquaLineDataSet1.xss">
+      <DependentUpon>AquaLineDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AquaLineDataSet2.xsc">
+      <DependentUpon>AquaLineDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="AquaLineDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AquaLineDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AquaLineDataSet2.xss">
+      <DependentUpon>AquaLineDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="AquaLineDataSet3.xsc">
+      <DependentUpon>AquaLineDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="AquaLineDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AquaLineDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AquaLineDataSet3.xss">
+      <DependentUpon>AquaLineDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="AquaLineDataSet4.xsc">
+      <DependentUpon>AquaLineDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="AquaLineDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AquaLineDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AquaLineDataSet4.xss">
+      <DependentUpon>AquaLineDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="AquaLineDataSet5.xsc">
+      <DependentUpon>AquaLineDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="AquaLineDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AquaLineDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AquaLineDataSet5.xss">
+      <DependentUpon>AquaLineDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
